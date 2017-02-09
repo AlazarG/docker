@@ -1,0 +1,5 @@
+http://lucene.apache.org/solr/quickstart.html
+
+curl "http://localhost:8983/solr/mycore/select?wt=json&indent=true&q=foundation"
+
+curl 'http://localhost:8983/solr/mycore/select?q=*:*&rows=0&wt=json&indent=on&facet=on&facet.pivot=cat,inStock'

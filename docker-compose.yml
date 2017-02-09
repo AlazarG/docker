@@ -1,0 +1,14 @@
+version: '2'
+services:
+  solrH:
+    image: solr
+    ports:
+     - "8983:8983"
+    volumes:
+      - dataAlazar:/opt/solr/server/solr/mycores
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - mycore
+volumes:
+  dataAlazar:
